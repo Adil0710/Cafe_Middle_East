@@ -82,8 +82,8 @@ function About() {
   });
 
   // Move left image from -200px to 0px with blur and fade effect
-  const leftX = useTransform(scrollYProgress, [0, 1], [-200, 85]);
-  const rightX = useTransform(scrollYProgress, [0, 1], [200, -85]);
+  const leftX = useTransform(scrollYProgress, [0, 1], [-300, 5]);
+  const rightX = useTransform(scrollYProgress, [0, 1], [300, -5]);
 
   const text =
     "Immerse Yourself in the Captivating Ambiance and Indulge in Our Signature Dishes";
