@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Poppins, Fascinate_Inline } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"], 
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const fascinateInline = Fascinate_Inline({
+  variable: "--font-fascinateinline", // Ensure consistency in variable name
   subsets: ["latin"],
+  weight: "400", 
 });
 
 export const metadata: Metadata = {
@@ -24,9 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${poppins.variable} ${fascinateInline.variable} antialiased`}>
         {children}
       </body>
     </html>
