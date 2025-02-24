@@ -39,7 +39,7 @@ const container = {
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1, // Adjust for stagger effect
+      staggerChildren: 0.1, 
     },
   },
 };
@@ -54,11 +54,11 @@ const Card = ({ title, description, icon, index }: CardProps) => {
     <motion.div
       initial={{ opacity: 0, y: 50, filter: "blur(10px)" }}
       whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-      transition={{ duration: 0.8, ease: "easeOut", delay: index * 0.2 }} // Staggered animation
+      transition={{ duration: 0.8, ease: "easeOut", delay: index * 0.2 }} 
       viewport={{ once: true, amount: 0.3 }}
       className="relative min-h-80 max-h-80 w-80"
     >
-      {/* Circular Icon Background */}
+  
       <div className="w-56 h-56 top-0 rounded-full left-1/2 -translate-x-1/2 absolute bg-[#beb9b8] flex items-start justify-center">
         <div className="w-16 h-16 rounded-full flex justify-center items-center mt-8 bg-[#292527]">
           {icon}
@@ -77,11 +77,11 @@ const Card = ({ title, description, icon, index }: CardProps) => {
 function About() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
-    target: ref, // Track scroll progress of this section
-    offset: ["start center", "center center"], // When it enters and exits the viewport
+    target: ref, 
+    offset: ["start center", "center center"], 
   });
 
-  // Move left image from -200px to 0px with blur and fade effect
+  
   const leftX = useTransform(scrollYProgress, [0, 1], [-300, 5]);
   const rightX = useTransform(scrollYProgress, [0, 1], [300, -5]);
 

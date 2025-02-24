@@ -9,7 +9,7 @@ const poppins = Poppins({
 });
 
 const fascinateInline = Fascinate_Inline({
-  variable: "--font-fascinateinline", // Ensure consistency in variable name
+  variable: "--font-fascinateinline", 
   subsets: ["latin"],
   weight: "400", 
 });
